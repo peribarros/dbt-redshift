@@ -1,0 +1,15 @@
+version: 2
+
+sources:
+  - name: raw_seeds_s3_aws
+    database: dev
+    schema: raw_seeds_s3_aws
+    tables:
+      - name: categorias
+      - name: clientes
+      - name: itens_pedidos
+      - name: pagamentos
+      - name: pedidos
+      - name: produtos
+      - name: avaliacoes
+      - name: carrinho
