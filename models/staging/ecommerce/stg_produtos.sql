@@ -1,1 +1,0 @@
-select * from {{ source('raw_seeds_s3_aws', 'produtos') }}
