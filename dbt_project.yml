@@ -1,4 +1,3 @@
-
 name: 'dbt_aws'
 version: '1.0.0'
 
@@ -15,36 +14,37 @@ clean-targets:
   - "target"
   - "dbt_packages"
 
-# exemple de variables
-
+# Variáveis globais do projeto
 vars:
   ambiente: 'desenvolvimento'
   data_minima: '2023-01-01'
   schema_nome: 'desenvolvimento_schema'
 
-
+# Configurações de Modelos (Corrigido para corresponder a 'dbt_aws')
 models:
-  dbt_example:
+  dbt_aws:
     staging:
-      schema: staging
-      materialized: table
-      tags: ['staging']
+      +schema: staging
+      +materialized: view
+      +tags: ['staging']
     
     intermediate:
-      materialized: ephemeral
-      tags: ['intermediate']
+      +materialized: ephemeral
+      +tags: ['intermediate']
 
     marts:
-      schema: marts
-      materialized: table
-      tags: ['marts']
+      +schema: marts
+      +materialized: table
+      +tags: ['marts']
 
+# Configurações de Seeds
 seeds:
-  dbt_example:
+  dbt_aws:
     +schema: seeds
-    tags: ['seeds']
+    +tags: ['seeds']
     
+# Configurações de Snapshots
 snapshots:
-  dbt_example:
-    tags: ['snapshots']
-    schema: snapshots
+  dbt_aws:
+    +schema: snapshots
+    +tags: ['snapshots']
