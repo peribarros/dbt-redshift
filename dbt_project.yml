@@ -1,5 +1,5 @@
 
-name: 'dbt_example'
+name: 'dbt_aws'
 version: '1.0.0'
 
 profile: 'dbt_example'
